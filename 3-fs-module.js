@@ -9,5 +9,6 @@ http.createServer(function (req, res) {
     });
 }).listen(8080);
 
-// delete
-//fs.unlink("xyz")
+//fs.writeFile("myfile.txt", "Hey there!", function (err) { });
+//fs.readFile('demofile1.html', function (err, data) { });
+//fs.unlink("xyz"); // delete
