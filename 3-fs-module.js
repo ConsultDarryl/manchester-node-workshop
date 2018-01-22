@@ -1,14 +1,15 @@
 var http = require('http');
 var fs = require('fs');
 
-http.createServer(function (req, res) {
+http.createServer(function (request, response) {
     fs.readFile('demofile1.html', function (err, data) {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        res.end();
+        response.writeHead(200, { 'Content-Type': 'text/html' });
+        response.write(data);
+        response.end();
     });
 }).listen(8080);
 
-//fs.writeFile("myfile.txt", "Hey there!", function (err) { });
-//fs.readFile('demofile1.html', function (err, data) { });
-//fs.unlink("xyz"); // delete
+// fs.readFile('demofile1.html', function (err, data) { });
+// fs.writeFile("myfile.txt", "Hey there!", function (err) { });
+// fs.appendFile('log.txt', 'abc', function (err) { });
+// fs.unlink("xyz"); // delete
