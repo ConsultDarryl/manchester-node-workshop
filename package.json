@@ -1,15 +1,23 @@
 {
-  "name": "hello-world",
+  "name": "getting-started",
   "version": "1.0.0",
-  "description": "",
-  "main": "hello-world.ts",
+  "description": "this is the project to go with the presenation",
+  "main": "1-http-module.js",
   "dependencies": {
-    "express": "^4.14.0",
-    "nodemon": "^1.9.2",
-    "request": "^2.73.0",
-    "webpack": "^1.13.1"
+    "moment": "^2.20.1"
   },
-  "devDependencies": {
-    "@types/node": "^8.5.1"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConsultDarryl/node-getting-started.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ConsultDarryl/node-getting-started/issues"
+  },
+  "homepage": "https://github.com/ConsultDarryl/node-getting-started#readme"
 }
