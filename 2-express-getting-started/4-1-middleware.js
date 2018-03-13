@@ -1,22 +1,15 @@
 const express = require('express');
 const app = express();
 
-// An example of how to chain callbacks together
+// Application-level middleware
 
-var cb0 = function (req, res, next) {
-    console.log('CB0');
+app.use(function (req, res, next) {     // Using middleware with app.use
+    console.log('Time:', Date.now());
     next();
-}
+});
 
-var cb1 = function (req, res, next) {
-    console.log('CB1');
-    next();
-}
+app.get('/user', function (req, res, next) { // Adding middleware to a route hanlder
+    res.send('USER');
+});
 
-var cb2 = function (req, res, next) {
-    console.log('CB2');
-    res.send('Check the console in Visual Studio');
-}
-
-app.get('/example/c', [cb0, cb1, cb2])
-app.listen(8080, () => console.log('http://localhost:8080/example/c'));
+app.listen(8080, () => console.log('http://localhost:8080/user'));
