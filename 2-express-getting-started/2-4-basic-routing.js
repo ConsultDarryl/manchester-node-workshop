@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-// Route parameters 
+// An example of route parameters
 
 app.get('/users/:userId/books/:bookId', function (req, res) {
     let params = req.params; // { "userId": "34", "bookId": "8989" }

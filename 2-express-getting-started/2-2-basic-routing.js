@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-// Route matching based on regex's
+// An example of regex route matching
 
 app.get('/ab?cd', function (req, res) { res.send('Matched Route 1') }); //acd and abcd
 app.get('/ab+cd', function (req, res) { res.send('Matched Route 2') }); //abcd, abbcd, abbbcd, and so on
