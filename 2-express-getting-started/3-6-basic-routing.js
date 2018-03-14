@@ -3,7 +3,7 @@ const app = express();
 
 // An example 404 handler
 
-app.use(function (req, res, next) { // Beware the Middleware!
+app.use(function (req, res) {
   res.status(404).send("Sorry can't find that!");
 });
 
