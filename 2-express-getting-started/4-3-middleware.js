@@ -1,28 +1,15 @@
 const express = require('express');
-const bodyParser = require('body-parser')
-const methodOverride = require('method-override')
+const cookieParser = require('cookie-parser');
 const app = express();
 
-// Error-handling middleware
+// Third-party middleware e.g. cookie-parser
+// npm install cookie-parser
 
-function logErrors(err, req, res, next) {
-    if (req.xhr) {
-        res.status(500).send({ error: 'Something failed!' });
-        // when not calling “next”, you are responsible for writing (and ending) the response
-    } else {
-        next(err); // You must return next(err)
-    }
-}
+app.use(cookieParser()); // load the cookie-parsing middleware
 
-function catchAllErrorHandler(err, req, res, next) {
-    res.status(500);
-    res.render('error', { error: err });
-}
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(methodOverride());
-app.use(logErrors);
-app.use(catchAllErrorHandler);
+app.get('/', function (req, res) {
+    console.log('Cookies: ', req.cookies);
+    res.send('Check the console in Visual Studio');
+})
 
 app.listen(8080, () => console.log('http://localhost:8080/'));
