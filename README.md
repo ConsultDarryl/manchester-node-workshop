@@ -1,4 +1,4 @@
-Sample code to go with the Manchester Node Workshop presentations
+Sample code to accompany the Manchester Node Workshop meetups
 
-darrylbrown.co.uk
+https://darrylbrown.co.uk
 Twitter & LinkedIn: ConsultDarryl

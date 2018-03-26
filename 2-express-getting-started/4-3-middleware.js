@@ -13,3 +13,7 @@ app.get('/', function (req, res) {
 })
 
 app.listen(8080, () => console.log('http://localhost:8080/'));
+
+
+
+//res.cookie('manchester-node-workshop', 'hello world', { maxAge: 900000, httpOnly: true });
