@@ -15,7 +15,7 @@ function logErrors(err, req, res, next) {
 
 function catchAllErrorHandler(err, req, res, next) {
     res.status(500);
-    res.render('error', { error: err }); // completed the
+    res.render('error', { error: err }); // completed the response
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
