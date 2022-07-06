@@ -4,7 +4,7 @@
   "description": "this is the project to go with the presenation",
   "main": "1-http-module.js",
   "dependencies": {
-    "moment": "^2.20.1"
+    "moment": "^2.29.4"
   },
   "devDependencies": {},
   "scripts": {
